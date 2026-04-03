@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>glitch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	img {
+	  max-width: 100%;
+	}
+
+	td {
+	  padding: 6px 12px;
+	  vertical-align: top;
+	}
+	th {
+	  background: black;
+	  color: white;
+	}
+	.column {
+	  float: left;
+	  width: 25%;
+	  padding: 10px;
+	}
+
+	.column img {
+	  opacity: 0.8;
+	  cursor: pointer;
+	}
+
+	.column img:hover {
+	  opacity: 1;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.container {
+	  position: relative;
+	  display: none;
+	}
+
+	#imgtext {
+	  position: absolute;
+	  bottom: 15px;
+	  left: 40px;
+	  color: black;
+	  font-size: 20px;
+	}
+
+	.closebtn {
+	  position: absolute;
+	  top: 10px;
+	  right: 40px;
+	  color: white;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="page">
+	<h1>photos with a dlsr camera</h1>
+	<br>
+	<h2>series: brother(s)</h2>
+	<table>
+		<tr>
+		<div class="row">
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series1.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series-2.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series-3.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series-4.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series-5.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series-6.jpg" alt="" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/nicoleannbagalso_series7.jpg" alt="original" onclick="myFunction(this);">
+		  </div>		  
+		</div>
+		<div class="container bg-secondary">
+		  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		  <img id="expandedImg" style="width:100%;">
+		  <div id="imgtext"></div>
+		</div>
+		
+			<td style="background-color: white">
+				<b><u>brother(s)
+				</u></b>
+				<p>	I had no plans going into this series project, and I went on a couple of outings that might have possibly felt like, 
+				“yes, this is the one.” But when I was taking this walk with my brother late at night, we just watched a movie at the movie
+				theater and dropped off a friend back to their home, I was telling him that I wanted to take pictures but then did not 
+				tell him what they were of. I love the low exposure, slow shutter speed vibe of these late night photos. If you would like a specific location for each of these images, I would just have to say it is all from Fremont. Otherwise, I wanted to dedicate this to the complicated relationship I have for my brother, in the sense where, of course, I love and hate him. This is about how I look up to him like light in a dark tunnel, admiration where I follow, but also the loneliness of walking behind him or hoping that he would turn back and acknowledge me as well. There’s also an issue of where sometimes I feel like I’m the older one between the two of us, so frustration builds and my vision of him becomes blurry. The direction becomes unclear and so is my trace in walking behind him. I just could not imagine a world without him, no matter how much he gets on my nerves sometimes. I remember someone said something along the lines of “what are people, if not memories?” Beside my gripes with my siblings, I think I still love to be around them and we are each such a tangled mess of things. I will forever continue to want to hold these messy and shared memories with each other for as long as time does not forget. </p>
+			</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+		<h2>road</h2>
+			<img src="img/nicoleannbagalsolandscape-1.jpg" target="content">
+			<td style="background-color: white">
+			<b><u>road</u></b>
+			<p>ISO - 200 Aperture - f5.6 SS - 1/125</p>
+			<p>This view of a window to a road is from the Los Altos Hills, and actually I’m immensely fond of a certain location in those hills but when I went, there was a massive amount of fog. This shot was taken near the Windy Hill Preserve to be exact. I’ve been going up here with my cousins and taking long drives just to talk and spend time with each other. We’ve gone just to sit on the rail and look over the bay area, and there was a time when one of my cousins alongside one of my brothers went with me and brought a telescope to watch a meteor shower. There’s tons of animals in those hills, and the place is something I’ve always been attached to. When I went to take my pictures with my friends we met this lovely woman who lived nearby who was walking her dog, Coco, and she told us that the area further down the road should have cleared up a little, so we went to check it out. This is the shot that I was happy with at the time before the fog came rushing back in. I like the wispy look of it all, but I was kind of on the fence on the images I took to really be landscapes. I only really want to take pictures of things I like, so it was kind of difficult to find. There was actually this one row of clouds over one of the hills that we saw and it is such a shame we were already driving on the way down and there was no place to stop. I think the best photographs are the ones not taken.
+</p>
+						<a class="nav-link link-primary" href="javascript:history.go(-1)" style="text-align: right;" target="content">&lt;Return a Page&gt;</a>
+		
+		<script>
+		function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+	</script>
+</body>
+</html>

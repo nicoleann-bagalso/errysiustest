@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>logo/pixel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	img {
+	  max-width: 100%;
+	}
+
+	td {
+	  padding: 6px 12px;
+	  vertical-align: top;
+	}
+	th {
+	  background: black;
+	  color: white;
+	}
+	.column {
+	  float: left;
+	  width: 33%;
+	  padding: 10px;
+	}
+
+	.column img {
+	  opacity: 0.8;
+	  cursor: pointer;
+	}
+
+	.column img:hover {
+	  opacity: 1;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.container {
+	  position: relative;
+	  display: none;
+	}
+
+	#imgtext {
+	  position: absolute;
+	  bottom: 15px;
+	  left: 40px;
+	  color: black;
+	  font-size: 20px;
+	}
+
+	.closebtn {
+	  position: absolute;
+	  top: 10px;
+	  right: 40px;
+	  color: black;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="page">
+	<h1>logo/pixel assignment!</h1>
+	<br>
+	<table>
+		<h2>logo assignment!</h2>
+		<tr>
+		<div class="row">
+		  <div class="column">
+			<img src="img/Scale.png" alt="Different Scales" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/Colors.png" alt="Various Colors" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/Simple .png" onclick="myFunction(this);">
+		  </div>
+		</div>
+		<div class="container bg-secondary">
+		  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		  <img id="expandedImg" style="width:100%;">
+		  <div id="imgtext"></div>
+		</div>
+		
+			<td style="background-color: white">
+				<b><u>Fish Rocket !!!</u></b>
+				<p>I did multiple renditions, but this is what I've ultimately ended on. It was tough to work with Adobe Illustrator. I have never used Adobe Illustrator before this class, so it was definitely a challenge to learn how to do things and maybe I didn't even do it half of it right.
+				When considering my "brand" identity, while I don't think I can completely do it justice, I tried my best. I wanted to include my nickname of "Nico" somehow, but I also wanted to focus on how to make the N link up with a fish/rocket motif. 
+				I actually only added the star around midway through my process because it felt unbalanced and I was almost going to make it a simple circle shape. I definitely hope to revise it in the future. 
+				I even experimented in making it more complex, but I don't think I was very successful in my coloring attempts.</p>
+			</td>
+		</tr>
+	</table>
+		<h2>pixel assignment!</h2>
+		<br>
+	<table>
+		<tr>
+			<td width="130"><a href="img/74-Pixel-Art.png" target="_blank"><img src="img/74-Pixel-Art.png" style="width: 200%;"></a></td>
+			<td style="background-color: white">
+				<b><u>Rat :></u></b>
+				<p>This isn't the first time I've made pixel art, but it is the first time I used Adobe Photoshop to do so. I've made a couple of Stardew Valley mods for friends before so it was fun to make my own little character.
+			</td>		
+	</table>
+					<a class="nav-link link-primary" href="javascript:history.go(-1)" style="text-align: right;" target="content">&lt;Return a Page&gt;</a>
+		<script>
+		function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>glitch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	img {
+	  max-width: 100%;
+	}
+
+	td {
+	  padding: 6px 12px;
+	  vertical-align: top;
+	}
+	th {
+	  background: black;
+	  color: white;
+	}
+	.column {
+	  float: left;
+	  width: 25%;
+	  padding: 10px;
+	}
+
+	.column img {
+	  opacity: 0.8;
+	  cursor: pointer;
+	}
+
+	.column img:hover {
+	  opacity: 1;
+	}
+
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	.container {
+	  position: relative;
+	  display: none;
+	}
+
+	#imgtext {
+	  position: absolute;
+	  bottom: 15px;
+	  left: 40px;
+	  color: black;
+	  font-size: 20px;
+	}
+
+	.closebtn {
+	  position: absolute;
+	  top: 10px;
+	  right: 40px;
+	  color: black;
+	  font-size: 35px;
+	  cursor: pointer;
+	}
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="page">
+	<h1>glitch assignment!</h1>
+	<br>
+	<table>
+		<tr>
+		<div class="row">
+		  <div class="column">
+			<img src="img/yeaok2.jpg" alt="Image Editor" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/glitch copy 3.png" alt="mix" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/yeaok copy.png" alt="audacity" onclick="myFunction(this);">
+		  </div>
+		  <div class="column">
+			<img src="img/forsureforsurethirdtimesthecharm.jpg" alt="original" onclick="myFunction(this);">
+		  </div>		  
+		</div>
+		<div class="container bg-secondary">
+		  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		  <img id="expandedImg" style="width:100%;">
+		  <div id="imgtext"></div>
+		</div>
+		
+			<td style="background-color: white">
+				<b><u>Her</u></b>
+				<p>My intent for these series has to do with the reflection and repetition aspect of what I've seen so far with these glitch processes. The first image is using a rough sketch of a drawing I made in the last two weeks (it's February 15, 2026 today!) and it only slightly distorts the color and the alignment of a piece of the image; I wanted to keep it looking the same, before I went all out. The second image I used the complete drawing alongside audacity, and it's extremely distorted to the point of harsh recognition. The third image I used the first image, and then placed that image into audacity as well and I think it still looks quite cohesive. Like it was the mix of both of these two images that reflect each other, the beginning and the end. I kind of feel like I cheated with using different stages of the same drawing, but I think I quite like how it turned out, and I wish to create a series like this again when I have time with different images.</p>
+			</td>
+		</tr>
+	</table>
+						<a class="nav-link link-primary" href="javascript:history.go(-1)" style="text-align: right;" target="content">&lt;Return a Page&gt;</a>
+
+		<script>
+		function myFunction(imgs) {
+	  var expandImg = document.getElementById("expandedImg");
+	  var imgText = document.getElementById("imgtext");
+	  expandImg.src = imgs.src;
+	  imgText.innerHTML = imgs.alt;
+	  expandImg.parentElement.style.display = "block";
+	}
+	</script>
+</body>
+</html>

@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>errysius</title>
-	<link rel="icon" type="image/x-icon" href="favicon.ico">	
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -83,6 +84,49 @@
             </div>
         </div>
     </div>
+	<div style="width:40px; height:40px; position:absolute; bottom:0px; left:0px;">
+	<div id="winamp-container"></div>
+    <script>
+const Winamp = window.Webamp;
+// All configuration options are optional.
+const webamp = new Webamp({
+    // Optional.
+    initialTracks: [
+        {
+            metaData: {
+                artist: "Yuki Kajura",
+                title: "a tiny love",
+            },
+            url: "https://dn720307.ca.archive.org/0/items/yuki-kajiura-discography_202205/2013/2013.01.23%20-%20Sword%20Art%20Online%20Original%20Soundtrack%20I/26%20-%20a%20tiny%20love.mp3",
+        }, {
+            metaData: {
+                artist: "Yuki Kajura",
+                title: "at our parting - piano only",
+            },
+            url: "https://dn720307.ca.archive.org/0/items/yuki-kajiura-discography_202205/2013/2013.01.23%20-%20Sword%20Art%20Online%20Original%20Soundtrack%20I/18%20-%20at%20our%20parting%20-piano%20only.mp3",
+        },
+        {
+            metaData: {
+                artist: "Yuki Kajura",
+                title: "a tender feeling",
+            },
+            url: "https://ia800407.us.archive.org/29/items/yuki-kajiura-discography_202205/2013/2013.01.23%20-%20Sword%20Art%20Online%20Original%20Soundtrack%20I/22%20-%20a%20tender%20feeling.mp3",
+        },
+	        {
+            metaData: {
+                artist: "Yuki Kajura",
+                title: "past sadness",
+            },
+            url: "https://dn720307.ca.archive.org/0/items/yuki-kajiura-discography_202205/2013/2013.04.24%20-%20Sword%20Art%20Online%20Original%20Soundtrack%20II/12%20-%20past%20sadness.mp3",
+        },	
+      ],
+    initialSkin: {
+        url: "blacktrans.wsz"
+    },
+});
+webamp.renderWhenReady(document.getElementById('winamp-container'));
+</script>
+</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
